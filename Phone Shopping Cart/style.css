@@ -1,0 +1,866 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital@1&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #ededee;
+    /* color: white; */
+
+}
+.navbar {
+    position: fixed;
+    width: 100%;
+    background-color: black;
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 50px;
+}
+.navbar ul {
+    gap: 2rem;
+    margin-left: 6em;
+}
+.navbar ul li {
+    list-style: none;
+    text-transform: uppercase;
+    font-weight: 800;
+    
+}
+.navbar ul li a {
+    text-decoration: none;
+    color: #fff;
+    
+}
+.navbar,.navlink {
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #ffffff;
+
+}
+/* .navlink:hover{
+    color: #e0f780;
+} */
+.active, a.navlink:hover  {
+    color: #e0f780;
+}
+.navbar h1 {
+    margin-left: 4em;
+}
+h1 {
+    font-size: 2em;
+    color:#2a9d8f;
+    text-transform: uppercase;
+}
+.cartIcon {
+    position: relative;
+    background-color: #2a9d8f;
+    justify-content: space-around;
+    align-items: center;
+    height: 35px;
+    width: 35px;
+    border-radius: 3px;
+}
+.cartIcon i {
+    font-size: 30px;
+    cursor: pointer;
+}
+.cartNumber {
+    position: absolute;
+    top: -10px;
+    right: 0;
+    background-color: red;
+    color: #fff;
+}
+/* rgb(44, 1, 201) */
+.hero {
+    /* position: relative; */
+    background: #2a9d8f;
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 2px solid white;
+    gap: 3rem;
+}
+.hero-text {
+    /* position: absolute; */
+    margin-bottom: 3em;
+    font-size: 1.5em;
+
+
+}
+.hero-img img {
+    margin-top: -80px;
+}
+/* .container .info {
+    border: 1px solid #316761 ;
+} */
+.buttons {
+    display: flex;
+    margin-top: 1em;
+    gap: 1em;
+}
+.buttons button {
+    padding: 1em 3em;
+    border-radius: 1em;
+    background-color: #316761;
+    color: black;
+    cursor: pointer;
+    font-size: 0.5em;
+}
+#services {
+    /* background: #2a9d8f; */
+    text-align: center;
+    /* border: 1px solid black; */
+    padding: 3em 0;
+    border-bottom: 2px solid #fff;
+}
+#services h1 {
+    color: black;
+    text-align: center;
+}
+.activity {
+    /* position: relative; */
+    justify-content: center;
+    height: 270px;
+    display: flex;
+    gap: 3em;
+}
+.activity .block {
+    background-color: aliceblue;
+    margin-top: 1em;
+    border: 1px solid black;
+    border-radius: 4px;
+    box-shadow: 0px 2px 0px 1px #316761;
+    height: 250px;
+    font-size: 1.2em;
+    width: 300px;
+    padding: 5px;
+}
+.activity .block button {
+    padding: 0.7em 1.2em;
+    border-radius: 1em;
+    background-color: #316761;
+    color: white;
+    cursor: pointer;
+    font-size: 0.8em;
+    margin-top: 1em;
+    border: transparent;
+
+}
+.activity .block button a {
+    background-color: transparent;
+}
+.activity .block h2 {
+    margin: 0.4em 0;
+}
+.activity :hover {
+    background-color: #2a9d8f;
+}
+#Categories {
+    padding: 3em 0;
+    margin: 0 auto;
+    justify-content: center;
+    border-bottom: 2px solid #fff ;
+    width: 900px;
+}
+#Categories h1 {
+    color: black;
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+#iphone {
+    border: 1px solid #2a9d8f;
+    padding: 0.5em;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    transition: all 1s;
+    gap: 2em;
+}
+
+#iphone img {
+    height: 200px;
+    width: 200px;
+
+}
+#iphone span {
+    position: static;
+    padding: 0.5em ;
+    background: #2a9d8f;
+    margin-bottom: 2em;
+    margin-left: 10em;
+    font-size: 3em;
+    border-radius: 50%;
+}
+#iphone .info {
+    margin-bottom: 2em;
+}
+#iphone button {
+    padding: 0.7em 1.2em;
+    border-radius: 1em;
+    background-color: #316761;
+    color: white;
+    cursor: pointer;
+    font-size: 0.8em;
+    margin-top: 1em;
+    border: transparent;
+}
+
+.samsung {
+    /* position: relative; */
+    border: 1px solid #2a9d8f;
+    padding: 0.6em;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5em auto;
+}
+.samsung img {
+    height: 200px;
+    width: 200px;
+    margin-right: 2em;
+}
+.samsung span {
+    position: static;
+    padding: 0.5em;
+    background: #2a9d8f;
+    margin-bottom: 2em;
+    margin-left: 3em;
+    font-size: 3em;
+    border-radius: 50%;
+}
+.samsung .info {
+    margin-bottom: 2em;
+}
+.samsung button {
+    padding: 0.7em 1.2em;
+    border-radius: 1em;
+    background-color: #316761;
+    color: white;
+    cursor: pointer;
+    font-size: 0.8em;
+    margin-top: 1em;
+    border: transparent;
+}
+.headset {
+    /* position: relative; */
+    border: 1px solid #2a9d8f;
+    padding: 0.6em;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5em auto;
+}
+.headset img {
+    height: 200px;
+    width: 250px;
+    /* margin-right: 2em; */
+}
+.headset span {
+    position: static;
+    padding: 0.5em;
+    background: #2a9d8f;
+    margin-bottom: 2em;
+    margin-left: 10em;
+    font-size: 3em;
+    border-radius: 50%;
+}
+.headset .info {
+    margin-bottom: 2em;
+}
+.headset button {
+    padding: 0.7em 1.2em;
+    border-radius: 1em;
+    background-color: #316761;
+    color: white;
+    cursor: pointer;
+    font-size: 0.8em;
+    margin-top: 1em;
+    border: transparent;
+}
+.airpods{
+    /* position: relative; */
+    border: 1px solid #2a9d8f;
+    padding: 0.6em;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5em auto;
+}
+.airpods img {
+    height: 200px;
+    width: 200px;
+    margin-right: 2em;
+}
+.airpods span {
+    position: static;
+    padding: 0.5em;
+    background: #2a9d8f;
+    margin-bottom: 2em;
+    margin-left: 3em;
+    font-size: 3em;
+    border-radius: 50%;
+}
+.airpods .info {
+    margin-bottom: 2em;
+}
+.airpods button {
+    padding: 0.7em 1.2em;
+    border-radius: 1em;
+    background-color: #316761;
+    color: white;
+    cursor: pointer;
+    font-size: 0.8em;
+    margin-top: 1em;
+    border: transparent;
+}
+.ipad {
+    /* position: relative; */
+    border: 1px solid #2a9d8f;
+    padding: 0.6em;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5em auto;
+}
+.ipad img {
+    height: 200px;
+    width: 200px;
+    margin-right: 2em;
+}
+.ipad span {
+    position: static;
+    padding: 0.5em;
+    background: #2a9d8f;
+    margin-bottom: 2em;
+    margin-left: 10em;
+    font-size: 3em;
+    border-radius: 50%;
+}
+.ipad .info {
+    margin-bottom: 2em;
+}
+.ipad button {
+    padding: 0.7em 1.2em;
+    border-radius: 1em;
+    background-color: #316761;
+    color: white;
+    cursor: pointer;
+    font-size: 0.8em;
+    margin-top: 1em;
+    border: transparent;
+}
+.watch {
+    /* position: relative; */
+    border: 1px solid #2a9d8f;
+    padding: 0.6em;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5em auto;
+}
+.watch img {
+    height: 200px;
+    width: 200px;
+    margin-right: 2em;
+}
+.watch span {
+    position: static;
+    padding: 0.5em;
+    background: #2a9d8f;
+    margin-bottom: 2em;
+    margin-left: 3em;
+    font-size: 3em;
+    border-radius: 50%;
+}
+.watch .info {
+    margin-bottom: 2em;
+}
+.watch button {
+    padding: 0.7em 1.2em;
+    border-radius: 1em;
+    background-color: #316761;
+    color: white;
+    cursor: pointer;
+    font-size: 0.8em;
+    margin-top: 1em;
+    border: transparent;
+}
+#contacts {
+    background-color: #2a9d8f;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    padding: 1em;
+    height: 500px;
+}
+#contacts h1 {
+    color: black;
+    margin-bottom: 0.3em;
+}
+#contacts form {
+    text-align: start;
+    border: 1px solid black;
+    background-color: #ededee;
+    border-radius: 4px;
+    padding: 1em;
+    margin: 1em auto;
+    width: 600px;
+    justify-content: center;
+    align-items: center;
+}
+#contacts .input-box {
+    display: flex;
+    flex-direction: column;
+}
+#contacts .input-box input {
+    height: 45px;
+    margin: 2px;
+    outline: none;
+    padding-left: 7px;
+    border-radius: 1em;
+    border-color: lightskyblue;
+    font-size: 0.8em;
+}
+form button {
+    padding: 0.7em 1.2em;
+    border-radius: 1em;
+    background-color: #316761;
+    color: white;
+    cursor: pointer;
+    font-size: 0.8em;
+    margin-top: 1em;
+    border: transparent;
+
+}
+a {
+    text-decoration: none;
+    color: white;
+}
+.cartPage {
+    position: fixed;
+    top: 60px;
+    left: 22%;
+    opacity: 0;
+    pointer-events: none;
+  
+}
+.cartPage .container {
+    padding: 0.5em 0;
+    margin: 0 auto;
+}
+.cartPage h2 {
+    font-size: 2em;
+    text-align: center;
+}
+.cartPage h5 {
+    font-size: 1.5em; 
+    color: white;
+    text-align: center;
+
+}
+.cartPage .icon {
+    margin-right: 1em;
+    font-size: 2em;
+    color: aliceblue;
+    text-align: end;
+}
+.cartPage.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+.icon {
+    cursor: pointer;
+
+}
+
+.cartPage .container {
+    border-radius: 4px;
+    background: #316761;
+    height: fit-content;
+    width: 700px;
+}
+.cartPage .buttons {
+    text-align: center;
+
+}
+.cartPage button {
+    padding: 0.8em 1.2em;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 1em;
+    background-color: red;
+    color: white;
+    border: transparent;
+
+}
+.cartPage h4 {
+    text-align: start;
+}
+.cart-item {
+    position: relative;
+    width: 600px;
+    height : 150px;
+    margin: 1em auto;
+    border: 1px solid black;
+    display: flex;
+    background: cornsilk;
+    grid-template-columns: repeat(45, 600px);
+}
+.cart-item img {
+    border: 1px solid black;
+    width: 300px;
+}
+.cart-item .details {
+    gap: 1em;
+    width: 400px;
+    padding: 0.6em;
+    background: #316761;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+}
+.footer {
+    background-color: #316761;
+    text-align: center;
+    align-items: center;
+    height: 150px;
+    padding: 1em 0;
+}
+.footer .social-media {
+    padding-bottom: 1em;
+}
+.footer .social-media a {
+    display: inline-block;
+    text-align: center;
+    margin: 0 8px;
+    line-height: 35px;
+    font-size: 2em;
+    width: 40px;
+    height: 40px;
+
+}
+.footer .social-media a:hover {
+    color: black;
+}
+.footer .list {
+    display: flex;
+    justify-content: center;
+    gap: 3em;
+    line-height: 35px;
+}
+.footer .list li {
+    text-decoration: none;
+    list-style: none;
+}
+.footer .list li a:hover {
+    color: black;
+}
+@media(max-width: 800px){
+    body {
+        width: 100%;
+    }
+    .navbar {
+        justify-content: space-between;
+        padding: 0 1em;
+    }
+    .navbar nav {
+        display: none;
+
+    }
+    .hero {
+        gap: 0;
+        padding: 0 1em;
+    }
+    .hero img{
+        display: none;
+
+    }
+    #services {
+        padding: 2em 0;
+        /* height: 1100px; */
+    }
+    .activity {
+        margin-top: 1em;
+    }
+    .activity .block {
+        font-size: 1.1em;
+        margin: 0 0.4em;
+        height: 250px;
+        width: 200px;
+    }
+    .activity .block button {
+        padding: 0.4em 0.6em;
+        margin-top: .3em;
+    }
+    #Categories {
+        width: 500px;
+    }
+
+}
+@media(max-width: 1000px){
+    .navbar h1 {
+        margin-left: 0.5em;
+    }
+    .hero {
+        padding: 0 1em;
+    }
+    .hero img {
+        height: 350px;
+        width: 350px;
+    }
+    .activity {
+        gap: 1em;
+    }
+    .activity .block {
+        height: 250px;
+        width: 250px;
+    }
+    .activity .block h2 {
+        margin: 0;
+    }
+    #Categories{
+        width: 600px;
+    }
+    #Categories span {
+        top: -75px;
+        padding-top: 0.5em;
+    }
+    #iphone span {
+        margin-left: 5em;
+    }
+    .headset span {
+        margin-left: 5em;
+    }
+    .ipad span {
+        margin-left: 5em;
+    }
+
+
+
+}
+@media(min-width: 1000px) {
+    .activity {
+        gap: 1em;
+    }
+    .hero {
+        padding: 0 1em;
+    }
+
+}
+@media(max-width: 689px) {
+    .cartIcon {
+        margin-right: 1em;
+    }
+    #services {
+        height: 1100px;
+    }
+    .activity {
+        font-size: 0.8em;
+        display: inline-block;
+        gap: 1em;
+
+    }
+    .activity .block {
+        font-size: 1.4em;
+        margin-top: 0.5em;
+        height: 300px;
+        width: 350px;
+    }
+    #Categories{
+        width: 300px;
+        /* display: block; */
+        justify-content: center;
+        margin: 0 auto;
+    }
+
+    #Categories img {
+        justify-content: start;
+        height: 100px;
+        width: 100px;
+    } 
+    #Categories .info {
+        margin-bottom: 0;
+    }
+    #Categories span {
+        position: static;
+        padding: 0.5em;
+        background: #2a9d8f;
+        margin-bottom: 4em;
+        margin-left: 7em;
+        font-size: 2em;
+        border-radius: 50%;
+    }
+    
+
+    #iphone{
+        display: grid;
+        width: 330px;
+        margin: 1em 0 ;
+        border: 2px solid #316761;
+        border-radius: 4px;
+        gap: 0;
+        padding: 1em;
+    }
+    .samsung{
+        /* position: relative; */
+        border: 1px solid black;
+        display: flex;
+        flex-direction: column-reverse;
+        width: 330px;
+        /* justify-content: start; */
+        border: 2px solid #316761;
+        border-radius: 4px;
+        margin: 0 ;
+        padding: 1em;
+    }
+    .samsung .sam-img {
+        width: 325px;
+        padding-left: 1em;
+    }
+    .headset{
+        /* position: relative; */
+        display: grid;
+        width: 330px;
+        border: 2px solid #316761;
+        border-radius: 4px;
+        margin: 1em 0 ;
+        padding: 1em;
+    }
+    .airpods{
+        display: flex;
+        flex-direction: column-reverse;
+        border: 2px solid #316761;
+        width: 330px;
+        border-radius: 4px;
+        padding: 1em;
+        margin: 0;
+    }
+    .airpods .air-img {
+        width: 325px;
+        padding-left: 1em;
+    }
+    .ipad{
+        /* position: relative; */
+        display: grid;
+        width: 330px;
+        border: 2px solid #316761;
+        border-radius: 4px;
+        margin: 1em 0 ;
+        padding: 1em;
+    }
+    .watch{
+        display: flex;
+        flex-direction: column-reverse;
+        width: 330px;
+        border: 2px solid #316761;
+        border-radius: 4px;
+        margin: 0;
+        padding: 1em;
+    }
+    .watch .watch-img {
+        width: 325px;
+        padding-left: 1em;
+    }
+    #contacts {
+        margin: auto;
+    }
+    #contacts form {
+        width: 350px;
+
+    }
+
+}
+@media(max-width: 528px){
+    .hero .buttons button {
+        padding: 0.7em 1em;
+
+    }
+    #services {
+        margin: auto;
+        height: 900px;
+        width: min-content;
+    }
+    #services h1 {
+        font-size: 1.5em;
+    }
+    .activity .block {
+        font-size: 1.4em;
+        height: 250px;
+        width: 250px;
+    }
+    #Categories {
+        gap: 0.3em;
+
+    }
+    #Categories .container {
+        margin: auto;
+        width: min-content;
+    }
+    #Categories h1 {
+        font-size: 1.5em;
+        text-align: center;
+    }
+    #Categories span {
+        padding-top: 0.4em;
+        font-size: 1.2em;
+        font-weight: 900;
+        height: 40px;
+        width: 40px;
+
+    }
+    #iphone {
+        width: 300px;
+    }
+    .samsung{
+        width: 300px;
+    }
+    .samsung .sam-img {
+        padding-left: 1.7em;
+    }
+    .headset {
+        width: 300px;
+    }
+    .airpods {
+        width: 300px;
+    }
+    .airpods img {
+        padding-left: 1.7em;
+    }
+    .ipad {
+        width: 300px;
+    }
+    .watch {
+        width: 300px; 
+    }
+    .watch .watch-img {
+        padding-left: 1.7em;
+    }
+
+    #contacts form {
+        width: 300px;
+
+    }
+    .footer {
+        height: auto;
+    }
+    .footer .list {
+        display: inline-block;
+    }
+}

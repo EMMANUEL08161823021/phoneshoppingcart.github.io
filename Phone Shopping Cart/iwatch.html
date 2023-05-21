@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="css/aos.css"> -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="iphone.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    
+    <title>Samsung</title>
+</head>
+<body id="body" data-bs-spy="scroll" data-bs-target=".navbar">
+    <video autoplay loop muted plays-inline class="background-clip">
+        <source src="./images/iwatch evolution.mp4" type="video/mp4">
+    </video>
+    <div class="navbar">
+        <div class="logo">
+            <img src="./images/apple.png" alt="">
+            <h1><span>iWatch</span> Collections</h1>
+        </div>
+        <div class="cartIcon">
+            <i class="bi bi-cart" id="cart-icon"></i>
+            <div class="cartNumber" id="cart-number">0</div>
+        </div>
+    </div>
+    <div class="container" style="text-align:center">
+        <!-- <h1>Apple Models</h1> -->
+        <h2>OUR PRODUCTS</h2>
+        <p>Choose from our available gadgets in stock and place order on them.</p>
+        <div class="stocks" style="display: flex;">
+            <div class="iphone-names">
+                <h1>Model Name</h1>
+                <div class="arrow" style="display: flex; align-items: center; margin: 0 auto;">
+                    <h4 id="backward"><i class="bi bi-skip-backward"></i></h4>
+                    <div class="part1" id="part-one"  style="display: flex; align-items: center;">
+                        <div class="list1" id="list1">
+                            <ul style="list-style: none; align-self: center;">
+                                <li id="series1">Series 1</li>
+                                <li id="series2">Series 2</li>
+                                <li id="series3">Series 3</li>
+                                <li id="series4">Series 4</li>
+                                <li id="series5">Series 5</li>
+                                <li id="series6">Series 6</li>
+                                <li id="seriesSE">Series SE</li>
+                            </ul>
+                        </div>
+                        <div class="list2" id="list2">
+                            <ul style="list-style: none;">
+                                <li>iPhone 8Plus</li>
+                                <li>iPhone SE</li>
+                                <li>iPhone x</li>
+                                <li>iPhone xs</li>
+                                <li>iPhone xs max</li>
+                                <li>iPhone xr</li>
+                                <li>iPhone 11</li>
+                            </ul>
+                        </div>
+                        <div class="list3" id="list3">
+                            <ul style="list-style: none; ">
+                                <li>iPhone 11 Pro</li>
+                                <li>iPhone 11 Promax</li>
+                                <li>iPhone 12</li>
+                                <li>iPhone 12 Pro</li>
+                                <li>iPhone 12 Promax</li>
+                                <li>iPhone 13</li>
+                                <li>iPhone 13 Pro</li>
+        
+                            </ul>
+                        </div>
+                        <div class="list4" id="list4">
+                            <ul  style="list-style: none;">
+                                <li>iPhone 13 Promax</li>
+                                <li>iPhone 14</li>
+                                <li>iPhone 14 Pro</li>
+                                <li>iPhone 14 Promax</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <h4 id="forward"><i class="bi bi-skip-forward"></i></h4>
+
+                </div>
+
+            </div>
+            <div class="iphone-image" style="border: 1px solid black;">
+                <!-- <img src="./images/elegant-smartphone-composition__1_-removebg-preview.png" alt=""> -->
+            </div>
+            <div class="price-ratings">
+                <div class="table-responsive ms-4" style="border: 1px solid black; height: 230px;">
+                    <h3 class="mt-3 ">FEATURES</h3>
+                    <table class="table lg-4 table-bordered text-white" id="features">
+                        <thead>
+                            <tr>
+                                <th scope="col">INFO</th>
+                                <th scope="col">Amount Range</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Name</td>
+                                <td >Nil</td>
+                            </tr>
+                            <tr>
+                                <td>Weight</td>
+                                <td>Nil</td>
+                            </tr>
+                            <tr>
+                                <td>Height</td>
+                                <td>Nil</td>
+                            </tr>
+                            <tr>
+                                <td>Battery Health</td>
+                                <td>Nil</td>
+                            </tr>
+                            <tr>
+                                <td>Capacity</td>
+                                <td>Nil</td>
+                            </tr>
+                            <tr>
+                                <td>Amount</td>
+                                <td>Nil</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="controls" id="controls" style="display: flex; flex-direction: column; border: 1px solid black; height: 90px;">
+                    <h3>Quantity</h3>
+                    <div class="quantity" style="display: flex; flex-direction: row;">
+                        <span id="minus"><i class="bi bi-dash-lg"></i></span>
+                        <span id="quantity-number">0</span>
+                        <span id="plus"><i class="bi bi-plus-lg"></i></span>
+                    </div>
+                    <div id="button" class="cart">Add to Cart</div>
+
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <div class="cartPage" id="cartPage">
+        <div class="container" >
+            <div  class="icon" id="icon"><i class="bi bi-x-lg"></i></div>
+            <h2>Your Carts</h2>
+            <h5>Total Payment : $ <span id="total-payment">0</span></h5>
+            <!-- <h3>Your cart is empty</h3> -->
+            <div class="cartProducts" id="cart-products">
+                
+            </div>
+            <div class="buttons " id="buttons" style="text-align: center;">
+                <button id="clear-carts">Clear Carts <i class="bi bi-x-lg"></i></button>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="./js/aos.js"></script>
+    <script src="iwatch.js"></script>
+    
+
+</body>
+</html>
