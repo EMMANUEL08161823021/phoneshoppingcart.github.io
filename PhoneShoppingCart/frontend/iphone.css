@@ -1,0 +1,760 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    /* position: relative; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgb(0, 0, 0, 0.2);
+    width: 100%;
+    font-size: 1.1em;
+
+}
+.background-clip {
+    position: absolute;
+    background-size: cover;
+    top: 5px;
+    right: 0;
+    bottom: 0;
+    opacity: 0.1;
+    z-index: -1;
+}
+.navbar{
+    justify-content: space-around;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    background-color: #316761;
+    margin-bottom: 2em;
+
+}
+.navbar img {
+    height: 40px;
+    width: 40px;
+}
+.navbar h1 {
+    align-items: center;
+} 
+.navbar span {
+    color: #e0f780;
+}
+.navbar .logo{
+    display: flex;
+    gap: 0.3em;
+
+}
+.navbar .nav-link.active{
+    color: #316761;
+}
+
+.container {
+    width: 1150px;
+    /* height: 800px; */
+    margin: 0 auto;
+}
+.container .stocks {
+    border: 1px solid black;
+    padding: 0 2em;
+    margin-top: 2em;
+    align-items: center;
+    gap: 3em;
+}
+.container .stocks .iphone-names {
+    border: 1px solid black;
+}
+.container .stocks .iphone-names .part1{
+    justify-content: center;
+}
+.stocks .part1 {
+    display: flex;
+    width: 300px;
+    height: 350px;
+    padding: 10px;
+    overflow-x: scroll;
+    /* overflow-y: scroll; */
+}
+.stocks .part1::-webkit-scrollbar{
+    /* display: grid; */
+}
+
+#forward, #backward {
+    width: 30px;
+    cursor: pointer;
+    /* margin: 10px; */
+}
+.stocks .part1 .list1 {
+    width: 100%;
+    margin-left: 50.5em;
+    display: grid;
+    grid-template-columns: auto;
+    grid-gap: 20px;
+    flex: none;
+}
+.stocks .part1 ul{
+    height: 320px;
+}
+.stocks .part1 .list1 ul {
+    width: 250px;
+}
+.stocks .part1 .list2 ul {
+    margin: 0 1em;
+    width: 250px;
+}
+.stocks .part1 .list3 ul {
+    width: 250px;
+    margin: 0 1em;
+}
+.stocks .part1 .list4 ul {
+    width: 250px;
+    margin: 0 1em;
+}
+.stocks .part1 .list5 ul {
+    width: 250px;
+    margin: 0 1em;
+}
+.stocks .part1 .list6 ul {
+    width: 250px;
+    margin: 0 1em;
+}
+/* .stocks .part1 .list7 ul {
+    width: 250px;
+    margin: 0 1em;
+} */
+.stocks .iphone-names ul li {
+    padding: 0.5em 1em;
+}
+.stocks .iphone-names li a {
+    text-decoration: none;
+    color: black;
+ 
+}
+.stocks .iphone-names li:hover {
+    background: #316761;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+.iphone-names .part1{
+    /* padding: 0.6em; */
+    gap: 1em;
+}
+.iphone-names .part1 .list2{
+    transition: 0.2s ease-in-out;
+}
+.iphone-names .list1 {
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+    display: flex;
+}
+
+.iphone-names .part1 h4 {
+    position: relative;
+    cursor: pointer;
+}
+.container .stocks li {
+    height: 40px;
+    border: 1px solid black;
+    padding-top: 0.5em;
+    text-align: center;
+}
+.container .stocks .price-ratings {
+    width: 250px;
+    height: 320px;
+    text-align: center;
+    border: 1px solid black;
+    align-items: center;
+}
+.container .stocks .iphone-image {
+    width: 400px;
+    height : 400px;
+    /* background: #2a9d8f; */
+}
+.container .stocks .iphone-image img{
+    height: 400px;
+    width: 400px;
+}
+.controls .quantity {
+    justify-content: center;
+    font-size: 1.2em;
+    gap: 1em;
+
+}
+.price-ratings .table {
+    justify-content: center;
+    height : 200px;
+    margin: 0 auto;
+
+}
+.price-ratings .controls {
+    /* height : 500px; */
+}
+/* .price-ratings .controls .border {
+    height: 50px;
+} */
+.price-ratings .controls .cart {
+    font-size: 1.2em;
+    cursor: pointer;
+    border: 1px solid black;
+    padding: 0.3em 0;
+
+}
+.price-ratings .controls .cart:hover {
+    background-color: #316761;
+    color: white;
+}
+.price-ratings .controls .border p {
+
+    padding-top: 0.2em;
+}
+
+.quantity #plus{
+    cursor: pointer;
+}
+.quantity #minus{
+    cursor: pointer;
+}
+.cartIcon {
+    position: relative;
+    background-color: #2a9d8f;
+    /* left: 20%; */
+    align-items: center;
+    height: 40px;
+    width: 40px;
+    border-radius: 3px;
+}
+.cartIcon i {
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+}
+.cartNumber {
+    position: absolute;
+    background: red;
+    top: -3px;
+    left: 30px;
+}
+
+.cartPage {
+    position: absolute;
+    top: 60px;
+    left: 22%;
+    opacity: 0;
+    pointer-events: none;
+  
+}
+.cartPage .container {
+    padding: 0.5em 0;
+    margin: 0 auto;
+}
+.cartPage h2 {
+    font-size: 1.4em;
+    text-align: center;
+}
+.cartPage h5 {
+    font-size: 1.5em; 
+    color: white;
+    text-align: center;
+
+}
+.cartPage .icon {
+    margin-right: 1em;
+    font-size: 2em;
+    color: aliceblue;
+    text-align: end;
+}
+.cartPage.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+.icon {
+    cursor: pointer;
+
+}
+
+.cartPage .container {
+    border-radius: 4px;
+    background: #316761;
+    height: fit-content;
+    width: 700px;
+}
+.cartPage .buttons {
+    text-align: center;
+
+}
+.cartPage button {
+    padding: 0.8em 1.2em;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 1em;
+    background-color: red;
+    color: white;
+    border: transparent;
+
+}
+.cartPage h4 {
+    text-align: start;
+}
+.cart-item {
+    position: relative;
+    width: 600px;
+    height : 150px;
+    margin: 1em auto;
+    border: 1px solid black;
+    display: flex;
+    background: cornsilk;
+    grid-template-columns: repeat(45, 600px);
+}
+.cart-item img {
+    border: 1px solid black;
+    background: #316761;
+}
+.cart-item .details {
+    gap: 1em;
+    width: 400px;
+    padding: 0.6em;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+}
+.cart-item .detailsOne{
+    gap: 2em;
+    align-items: center;
+    display: flex;
+}
+.cart-item .detailsOne .amount{
+    background-color: #316761;
+    padding: 0.4em;
+    color: white;
+}
+.cart-item .detailsOne #clear {
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    right: 3px;
+    color: red;
+    font-size: 1.2em;
+}
+.cart-item .quantity {
+    justify-content: start;
+    font-size: 1.2em;
+    /* gap: 2em; */
+
+}
+#clear-carts i {
+    color: white;
+}
+.totalNumber {
+    text-align: start;
+}
+.bi {
+    cursor: pointer;
+}
+@media(min-aspect-ratio: 16/9) {
+    .background-clip {
+        width: 100%;
+
+    }
+
+}
+@media (max-aspect-ratio: 16/9) {
+    .background-clip {
+        width: 100%;
+        height : 100%;
+    }
+
+}
+
+@media(max-width: 1115px) {
+    .container {
+        width: 1000px;
+    }
+    .container .stocks {
+        gap: 1em;
+        padding: 1em;
+    }
+    .container .stocks .iphone-names {
+        width: 450px;
+        padding: 0;
+        border: 0 ;
+    }
+    .container .stocks .price-ratings {
+        width: 350px;
+    }
+
+    .stocks .iphone-names ul li {
+        padding: 0.5em 1.5em;
+    }
+    /* .iphone-names .part1{
+        padding: 0;
+        width: 300px;
+
+    } */
+    .cartPage {
+        top: 60px;
+        left: 14%;
+   
+    }
+
+}
+@media(max-width: 980px) {
+    .background-clip {
+        top: 10px;
+        left: 10px;
+        background-size: cover;
+        width: 100%;
+        height : 100%;
+
+    }
+    .container {
+        width: 850px;
+        text-align: center;
+        justify-content: center;
+        margin: 0 auto;
+        padding: 0;
+
+    }
+    .container .stocks {
+        width: 850px;
+        margin: 1em auto;
+        padding: 0;
+
+    }
+    .stocks .iphone-names ul li {
+        padding: 0.5em 1em;
+    }
+    .cartPage {
+        top: 60px;
+        left: 9%;
+      
+    }
+}
+@media(max-width: 851px) {
+    .container {
+        margin: 0 auto;
+        padding: 0;
+        width: 700px;
+
+    }
+    .container .stocks {
+        width: 700px;
+        display: flex;
+        flex-direction: column;
+        /* margin: 1em 0; */
+        padding: 0;
+
+    }
+    .stocks .iphone-names {
+        margin-left: 6em;
+    }
+    .iphone-names h1 {
+        text-align: center;
+        font-size: 1.7em;
+        margin-right: 3em;
+    }
+    .stocks .iphone-names ul {
+        width: 300px;
+        /* padding: 0.7em 0.6em; */
+    }
+    .cartPage {
+        top: 60px;
+        left: 6%;
+    
+    }
+
+}
+@media(max-width: 778px) {
+    .container {
+        width: 600px;
+        /* margin: 0 auto; */
+    }
+    .container .stocks {
+        width: 500px;
+        margin: 1em auto;
+        padding: 0 1em;
+
+    }
+    .cartPage {
+        width: 400px;
+        top: 60px;
+        left: 10%;
+    
+    }
+    .cartPage .container {
+        width: 550px;
+    }
+    .cart-item {
+        width: 400px;
+    }
+    .cart-item .details {
+        width: 250px;
+    }
+    .cart-item .detailsOne .amount {
+        width: 70px;
+        text-align: center;
+    }
+}
+@media(max-width: 640px) {
+    .container {
+        width: 400px;
+        /* margin: 0 auto; */
+    }
+    .container .stocks {
+        width: 400px;
+        margin: 1em auto;
+        padding: 0 1em;
+
+    }
+    .cartPage {
+        width: 350px;
+        top: 60px;
+        left: 10%;
+    
+    }
+    .cartPage .container {
+        width: 430px;
+    }
+    .cartProducts {
+        width: 300px;
+        background: #316761;
+
+    }
+    .cart-item {
+        display: inline-block;
+        background: #316761;
+        height : 360px;
+        width: 300px;
+        margin: 1em 3em;
+        
+    }
+    .cart-item img {
+        background: white;
+        width: 300px;
+        height : 200px;
+
+    }
+    .cart-item .details {
+        display: flex;
+        flex-direction: column;
+        width: 300px;
+        border: transparent;
+        color: white;
+    }
+
+}
+@media(max-width: 500px) {
+    .background-clip {
+        display: none;
+    }
+    .navbar h1 {
+        font-size: 1.7em;
+        padding: 0.3em 0;
+    }
+    .navbar img {
+        margin-top: 0.3em;
+    }
+    .container {
+        width: 300px;
+    }
+    .container .stocks {
+        width: 320px;
+    }
+    .stocks .iphone-names {
+        margin-left: 3em;
+    }
+    .iphone-names h1 {
+        margin-right: 2em;
+    }
+    .container .stocks .iphone-names {
+        width: 350px;
+    }
+    .stocks .part1 .list1 {
+        margin-left: 51em;
+    }
+    .stocks .iphone-names ul {
+        /* border: 1px solid black; */
+        width: 200px;
+        padding: 0 25px;
+        margin-right: -2em;
+    }
+    #forward, #backward {
+        width: 20px;
+    }
+    #backward {
+        position: absolute;
+    }
+    .stocks .part1 .list1 ul {
+        width: 250px;
+        margin: 0 1em;
+    }
+    .stocks .part1 .list2 ul {
+        margin: 0 1em;
+    }
+    .stocks .part1 .list3 ul {
+        margin: 0 1em;
+    }
+    .stocks .part1 .list4 ul {
+        margin: 0 1em;
+    }
+    .stocks .part1 .list5 ul {
+        margin: 0 1em;
+    }
+    .stocks .part1 .list6 ul {
+        margin: 0 1em;
+    }
+    .container .stocks .price-ratings {
+        width: 250px;
+        margin-bottom: 0.5em;
+        /* padding: 0.7em 0.6em; */
+    }
+    .container .stocks .iphone-image {
+        width: 300px;
+        justify-content: center;
+
+    }
+    .iphone-names .part1{
+        width: 250px;
+        /* border: 1px solid black; */
+        margin: 0 0 0 1.5em ;
+        padding: 0;
+
+    }
+    .cartPage {
+        width: 300px;
+        top: 60px;
+        left: 0;
+        margin: 0 3em;
+    
+    }
+    .cartPage .container {
+        width: 350px;
+
+    }
+    .cart-item {
+        display: inline-block;
+        background: #316761;
+        height : 360px;
+        width: 250px;
+        margin: 1em 3em;
+        
+    }
+    .cart-item img {
+        background: white;
+        width: 250px;
+        height : 200px;
+
+    }
+    .cart-item .details {
+        width: 250px;
+
+    }
+    .cart-item .detailsOne{
+        gap: 0.5em;
+        width: 220px;
+    }
+    .cart-item .detailsOne .amount{
+        width: 100px;
+    }
+}
+@media(max-width: 434px) {
+    .background-clip {
+        width: auto;
+        height : 100%;
+    }
+    .container .stocks {
+        width: 300px;
+    }
+    .cartPage {
+        width: 280px;
+        top: 60px;
+        left: -9px;
+        margin: 0 1.5em;
+        padding: 0 0.5em;
+    }
+    .cartPage .container {
+        margin: 0 auto;
+        width: 330px;
+
+    }
+    .cartProducts {
+        margin: 0 0.7em;
+    }
+    .cart-item {
+        height : 310px;
+        width: 280px;
+        margin: 1em 0.7em;
+     
+    }
+    .cart-item img {
+        background: white;
+        width: 280px;
+        height : 150px;
+
+    }
+    .cart-item .detailsOne {
+        width: 250px;
+    }
+    .cart-item .detailsOne .amount{
+        /* width: 200px; */
+        text-align: center;
+
+    }
+
+    
+}
+@media(max-width: 370px) {
+    .navbar h1 {
+        align-items: center;
+        font-size: 1.5em;
+    } 
+    .navbar img {
+        height: 35px;
+        width: 35px;
+        margin-top: 0.3em;
+    }
+    .cartPage {
+        width: 200px;
+        top: 60px;
+        left: 0;
+        margin: 0 0.2em;
+    
+    }
+    .cartPage .container {
+        margin: 0 auto;
+        width: 280px;
+
+    }
+    .cart-item {
+        height : 350px;
+        width: 200px;
+        margin: 1em 0.7em;
+     
+    }
+    .cart-item img {
+        background: white;
+        width: 200px;
+        height : 150px;
+
+    }
+    .cartProducts {
+        width: 220px;
+        background: #316761;
+        margin: 0 auto;
+
+    }
+    .cart-item .detailsOne {
+        text-align: center;
+        display: inline-block;
+        width: 180px;
+    }
+    .cartPage .icon {
+        font-size: 1.3em;
+    }
+}
+
+
+
