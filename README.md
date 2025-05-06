@@ -73,7 +73,7 @@ GadgetShop is an e-commerce platform for purchasing electronic gadgets, includin
 ## Installation
 
 ### Clone the Repository:
-## FOR FRONTEND
+## FOR FRONTEND AND BACKEND
 ```bash
 git clone https://github.com/EMMANUEL08161823021/phoneshoppingcart.github.io
 cd PhoneShoppingCart
